@@ -1,12 +1,956 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    hello world
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home doctor catagory page</title>
+    <link rel="stylesheet" href="./style/app.css" />
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <div class="nav-bar">
+          <div class="logo">
+            <img src="/assets/logo.svg" alt="logo" />
+          </div>
+          <div class="responsive-logo">
+            <img src="/assets/responsive-logo.svg" alt="responsive-logo" />
+          </div>
+          <ul class="menu-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Themes</a></li>
+            <li><a href="#">Future Products</a></li>
+            <li><a href="#">About US</a></li>
+            <li id="toggle">
+              <img src="/assets/person-icon.svg" alt="person-icon" />
+            </li>
+            <div id="target">
+              <div class="image">
+                <img src="/assets/person-icon(1).svg" alt="responsive-person-icon" />
+              </div>
+              <div class="log-in">
+                <div class="image">
+                  <img src="/assets/search.svg" alt="search engine" />
+                </div>
+                <p>Continue With Google</p>
+              </div>
+              <span>or</span>
+              <button class="btn-primary">Log in</button>
+            </div>
+          </ul>
+          <ul class="social-icons">
+            <li>
+              <img src="/assets/Instagram-icon.svg" alt="instagram" />
+            </li>
+            <li>
+              <img src="/assets/facebook-icon.svg" alt="facebook" />
+            </li>
+            <li>
+              <img src="/assets/twitter-icon.svg" alt="twitter"/>
+            </li>
+          </ul>
+          <div class="responsive-menu-button">
+            <img src="/assets/menu-icon.svg" alt="responsive menu button" />
+          </div>
+        </div>
+        <div class="drawer">
+          <div class="drawer-header">
+            <div class="logo">
+              <img src="/assets/logo.svg" alt="logo"/>
+            </div>
+            <div class="social-icon">
+              <div class="image">
+                <img src="./assets/Instagram-icon.svg" alt="instagram"/>
+              </div>
+              <div class="image">
+                <img src="./assets/twitter-icon.svg" alt="twitter"/>
+              </div>
+              <div class="image">
+                <img src="./assets/facebook-icon.svg" alt="facebook"/>
+              </div>
+            </div>
+          </div>
+          <div class="credentail">
+            <div class="image">
+              <img src="./assets/person-icon.svg" alt="person-icon"/>
+            </div>
+            <div class="login">
+              <div class="image">
+                <img src="./assets/search.svg" alt="search-engine"/>
+              </div>
+              <span>Continue With Google</span>
+            </div>
+          </div>
+          <ul>
+            <li>
+              <div class="image">
+                <img src="./assets/home.svg" alt="home"/>
+              </div>
+              <span>Home</span>
+            </li>
+            <li>
+              <div class="image">
+                <img src="./assets/categories.svg" alt="catagories"/>
+              </div>
+              <span>Categories</span>
+            </li>
+            <li>
+              <div class="image">
+                <img src="./assets/themes.svg" alt="themes"/>
+              </div>
+              <span>Themes</span>
+            </li>
+            <li>
+              <div class="image">
+                <img src="./assets/future-products.svg" alt="future-products"/>
+              </div>
+              <span>Future products</span>
+            </li>
+            <li>
+              <div class="image">
+                <img src="./assets/About-us.svg" alt="about-us"/>
+              </div>
+              <span>About US</span>
+            </li>
+            <li>
+              <div class="image">
+                <img src="./assets/profile.svg" alt="portfolio"/>
+              </div>
+              <span>Profile</span>
+            </li>
+          </ul>
+          <button class="btn-primary">Log in</button>
+        </div>
+      </div>
+      <div class="content-wrapper">
+        <div class="card-listing">
+          <div class="card">
+            <div class="image">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_856_2521)">
+                <path d="M29.679 6.8404C29.679 7.96109 29.679 9.08178 29.679 10.2025C29.1843 10.2025 28.6819 10.2025 28.1641 10.2025C28.1641 14.9789 28.1641 19.709 28.1641 24.4777C27.4917 24.4777 26.8425 24.4777 26.17 24.4777C26.2164 24.5782 26.2396 24.64 26.2628 24.7019C26.997 26.2863 26.5256 28.0639 25.1035 29.0687C24.6243 29.4088 24.0832 29.5634 23.5268 29.687C23.2562 29.687 22.9857 29.687 22.7152 29.687C22.6611 29.6716 22.607 29.6406 22.5529 29.6329C21.5713 29.4551 20.7985 28.9528 20.242 28.1258C20.126 27.9557 20.0178 27.8862 19.8092 27.8862C15.2027 27.8939 10.5963 27.8939 5.98989 27.8939C5.88942 27.8939 5.78121 27.8939 5.67301 27.8939C5.67301 28.5122 5.67301 29.0996 5.67301 29.687C5.09334 29.687 4.51368 29.687 3.93401 29.687C3.92628 29.5711 3.91855 29.4551 3.91855 29.3392C3.91855 27.8321 3.91855 26.3249 3.91855 24.8178C3.91855 24.7096 3.91855 24.5937 3.91855 24.4623C3.09156 24.4623 2.31094 24.4623 1.49941 24.4623C1.49941 19.7013 1.49941 14.9712 1.49941 10.2025C0.973841 10.2025 0.48692 10.2025 0 10.2025C0 9.08178 0 7.96109 0 6.8404C0.0154578 6.81721 0.0386445 6.79403 0.0386445 6.77084C0.216409 5.09367 1.76219 3.43196 4.0654 3.44742C10.2253 3.49379 16.393 3.46287 22.5529 3.46287C22.6766 3.46287 22.8002 3.46287 22.9394 3.46287C22.9394 2.87548 22.9394 2.32673 22.9394 1.73933C22.2515 1.73933 21.5868 1.73933 20.868 1.73933C20.868 1.1442 20.868 0.572266 20.868 0.00805664C22.8389 0.00805664 24.8098 0.00805664 26.7806 0.00805664C26.7806 0.579995 26.7806 1.15966 26.7806 1.76252C26.0541 1.76252 25.3817 1.76252 24.7093 1.76252C24.7093 2.33445 24.7093 2.88321 24.7093 3.4706C25.1576 3.4706 25.5826 3.45514 26.0155 3.4706C27.654 3.53243 29.0529 4.63767 29.5089 6.20663C29.5785 6.41531 29.6249 6.63172 29.679 6.8404ZM3.26159 22.7078C10.9982 22.7078 18.7039 22.7078 26.4096 22.7078C26.4096 18.5342 26.4096 14.3761 26.4096 10.2257C18.6807 10.2257 10.975 10.2257 3.26159 10.2257C3.26159 14.3838 3.26159 18.5342 3.26159 22.7078ZM27.9245 8.45574C27.9245 7.96109 27.9709 7.49736 27.9168 7.04135C27.7854 5.92066 26.9197 5.19415 25.7604 5.19415C18.4798 5.19415 11.1992 5.19415 3.91082 5.19415C3.84126 5.19415 3.7717 5.19415 3.70987 5.20187C2.92925 5.25598 2.35731 5.63469 1.98633 6.30711C1.61534 6.98725 1.76219 7.72922 1.74673 8.45574C10.4958 8.45574 19.1908 8.45574 27.9245 8.45574ZM20.0488 24.4777C15.2878 24.4777 10.4958 24.4777 5.68074 24.4777C5.68074 25.0342 5.68074 25.5752 5.68074 26.1317C10.349 26.1317 14.9941 26.1317 19.5928 26.1317C19.7473 25.5675 19.8942 25.0342 20.0488 24.4777ZM24.8716 26.209C24.8716 25.2506 24.1064 24.47 23.1558 24.4623C22.1974 24.4546 21.4013 25.2506 21.4013 26.209C21.409 27.1597 22.1897 27.9403 23.1403 27.9403C24.091 27.9403 24.8716 27.1674 24.8716 26.209Z" fill="currentcolor"/>
+                <path d="M21.8574 20.0728C21.2932 19.8873 20.7599 19.7095 20.2111 19.524C20.4507 18.7898 20.6903 18.0787 20.9299 17.3368C20.1416 17.3368 19.3919 17.3368 18.6035 17.3368C19.0982 15.8451 19.5928 14.3689 20.0875 12.8772C20.6362 13.0627 21.1772 13.2405 21.7337 13.4259C21.4941 14.1525 21.2623 14.8635 21.0149 15.5978C21.7878 15.5978 22.5298 15.5978 23.3336 15.5978C22.839 17.1049 22.352 18.5734 21.8574 20.0728Z" fill="currentcolor"/>
+                <path d="M6.2207 13.0549C6.80037 13.0549 7.34912 13.0549 7.92879 13.0549C7.92879 15.3272 7.92879 17.5918 7.92879 19.8718C7.36458 19.8718 6.80037 19.8718 6.2207 19.8718C6.2207 17.6073 6.2207 15.3427 6.2207 13.0549Z" fill="currentcolor"/>
+                <path d="M9.58203 13.0549C10.1617 13.0549 10.7182 13.0549 11.2901 13.0549C11.2901 15.3272 11.2901 17.5918 11.2901 19.8718C10.7182 19.8718 10.1617 19.8718 9.58203 19.8718C9.58203 17.6073 9.58203 15.3427 9.58203 13.0549Z" fill="currentcolor"/>
+                <path d="M12.9453 13.0549C13.525 13.0549 14.0815 13.0549 14.6534 13.0549C14.6534 15.3272 14.6534 17.5918 14.6534 19.8718C14.0892 19.8718 13.525 19.8718 12.9453 19.8718C12.9453 17.6073 12.9453 15.3427 12.9453 13.0549Z" fill="currentcolor"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_856_2521">
+                <rect width="29.679" height="29.679" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <span>Generator</span>
+          </div>
+          <div class="card">
+            <div class="image">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25.4297 29.9995C24.6486 29.9995 23.867 29.9995 23.0859 29.9995C23.0859 29.1845 23.0859 28.3694 23.0859 27.5573C17.7129 27.5573 12.382 27.5573 7.03125 27.5573C7.03125 28.3835 7.03125 29.1915 7.03125 29.9995C6.2502 29.9995 5.46855 29.9995 4.6875 29.9995C4.6875 29.1856 4.6875 28.3718 4.6875 27.538C4.06641 27.538 3.4834 27.5456 2.90098 27.5362C1.50234 27.514 0.343945 26.5483 0.05625 25.1778C0.0451172 25.1233 0.0193359 25.0718 0 25.019C0 20.1558 0 15.2925 0 10.4292C0.0123047 10.4146 0.0310547 10.4017 0.0357422 10.3847C0.455859 8.71358 1.48359 7.90967 3.20273 7.90967C8.55 7.90967 13.8979 7.90967 19.2451 7.90967C21.8408 7.90967 24.4365 7.89971 27.0322 7.91377C28.2932 7.92081 29.202 8.52608 29.7463 9.66045C29.8623 9.90186 29.9174 10.172 30.0006 10.4292C30.0006 15.2925 30.0006 20.1558 30.0006 25.019C29.9801 25.0812 29.9543 25.1427 29.9396 25.2065C29.7328 26.0896 29.24 26.7581 28.4426 27.1935C27.9891 27.4413 27.4986 27.5438 26.9824 27.5397C26.4691 27.5351 25.957 27.5386 25.4297 27.5386C25.4297 28.3853 25.4297 29.1927 25.4297 29.9995ZM14.9707 25.1948C18.9246 25.1948 22.8779 25.1948 26.8318 25.1948C27.4793 25.1948 27.6562 25.0214 27.6562 24.3868C27.6562 19.9448 27.6562 15.5034 27.6562 11.0614C27.6562 10.4356 27.4775 10.254 26.8611 10.254C18.9539 10.254 11.0461 10.254 3.13887 10.254C2.52246 10.2534 2.34375 10.4351 2.34375 11.0608C2.34375 15.5028 2.34375 19.9442 2.34375 24.3862C2.34375 25.0208 2.52129 25.1948 3.16816 25.1948C7.10215 25.1948 11.0361 25.1948 14.9707 25.1948Z" fill="currentcolor"/>
+                <path d="M8.67149 0C8.73653 0.0679687 8.79747 0.140625 8.86719 0.20332C9.67286 0.926953 9.94356 2.1252 9.39747 3.05625C8.72364 4.20527 7.95899 5.30156 7.23536 6.41836C6.50118 6.03926 6.01251 5.00273 6.18067 4.13027C6.24571 3.79336 6.36583 3.44531 6.54688 3.15645C7.21661 2.0918 7.92149 1.05 8.6129 0C8.63223 0 8.65215 0 8.67149 0Z" fill="currentcolor"/>
+                <path d="M15.7027 0C15.7678 0.0679687 15.8287 0.140625 15.8984 0.20332C16.7041 0.926953 16.9748 2.1252 16.4287 3.05625C15.7549 4.20527 14.9902 5.30156 14.2666 6.41836C13.5324 6.03926 13.0438 5.00273 13.2119 4.13027C13.277 3.79336 13.3971 3.44531 13.5781 3.15645C14.2479 2.0918 14.9527 1.05 15.6441 0C15.6635 0 15.6834 0 15.7027 0Z" fill="currentcolor"/>
+                <path d="M22.734 0C22.799 0.0679687 22.86 0.140625 22.9297 0.20332C23.7354 0.926953 24.0061 2.1252 23.46 3.05625C22.7861 4.20527 22.0215 5.30156 21.2979 6.41836C20.5637 6.03926 20.075 5.00273 20.2432 4.13027C20.3082 3.79336 20.4283 3.44531 20.6094 3.15645C21.2791 2.0918 21.984 1.05 22.6754 0C22.6947 0 22.7147 0 22.734 0Z" fill="currentcolor"/>
+                <path d="M4.70898 12.6104C5.48418 12.6104 6.23418 12.6104 7.00762 12.6104C7.00762 16.0187 7.00762 19.4189 7.00762 22.8355C6.24707 22.8355 5.48945 22.8355 4.70898 22.8355C4.70898 19.4383 4.70898 16.0381 4.70898 12.6104Z" fill="currentcolor"/>
+                <path d="M9.27148 22.8371C9.27148 19.4205 9.27148 16.0268 9.27148 12.6172C10.0438 12.6172 10.8008 12.6172 11.5795 12.6172C11.5795 16.0215 11.5795 19.4223 11.5795 22.8371C10.8137 22.8371 10.0555 22.8371 9.27148 22.8371Z" fill="currentcolor"/>
+                <path d="M16.1498 22.8389C15.3758 22.8389 14.6182 22.8389 13.8447 22.8389C13.8447 19.4287 13.8447 16.0309 13.8447 12.6172C14.6141 12.6172 15.3705 12.6172 16.1498 12.6172C16.1498 16.0162 16.1498 19.4146 16.1498 22.8389Z" fill="currentcolor"/>
+                <path d="M18.4775 12.6111C19.2557 12.6111 20.0057 12.6111 20.7779 12.6111C20.7779 16.0207 20.7779 19.4208 20.7779 22.8369C20.0145 22.8369 19.2568 22.8369 18.4775 22.8369C18.4775 19.4361 18.4775 16.0353 18.4775 12.6111Z" fill="currentcolor"/>
+                <path d="M23.1064 12.6111C23.8846 12.6111 24.6346 12.6111 25.4068 12.6111C25.4068 16.0207 25.4068 19.4208 25.4068 22.8369C24.6434 22.8369 23.8857 22.8369 23.1064 22.8369C23.1064 19.4361 23.1064 16.0353 23.1064 12.6111Z" fill="currentcolor"/>
+              </svg>
+            </div>
+            <span>Space Heater</span>
+          </div>
+          <div class="card">
+            <div class="image">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_856_2521)">
+                <path d="M29.679 6.8404C29.679 7.96109 29.679 9.08178 29.679 10.2025C29.1843 10.2025 28.6819 10.2025 28.1641 10.2025C28.1641 14.9789 28.1641 19.709 28.1641 24.4777C27.4917 24.4777 26.8425 24.4777 26.17 24.4777C26.2164 24.5782 26.2396 24.64 26.2628 24.7019C26.997 26.2863 26.5256 28.0639 25.1035 29.0687C24.6243 29.4088 24.0832 29.5634 23.5268 29.687C23.2562 29.687 22.9857 29.687 22.7152 29.687C22.6611 29.6716 22.607 29.6406 22.5529 29.6329C21.5713 29.4551 20.7985 28.9528 20.242 28.1258C20.126 27.9557 20.0178 27.8862 19.8092 27.8862C15.2027 27.8939 10.5963 27.8939 5.98989 27.8939C5.88942 27.8939 5.78121 27.8939 5.67301 27.8939C5.67301 28.5122 5.67301 29.0996 5.67301 29.687C5.09334 29.687 4.51368 29.687 3.93401 29.687C3.92628 29.5711 3.91855 29.4551 3.91855 29.3392C3.91855 27.8321 3.91855 26.3249 3.91855 24.8178C3.91855 24.7096 3.91855 24.5937 3.91855 24.4623C3.09156 24.4623 2.31094 24.4623 1.49941 24.4623C1.49941 19.7013 1.49941 14.9712 1.49941 10.2025C0.973841 10.2025 0.48692 10.2025 0 10.2025C0 9.08178 0 7.96109 0 6.8404C0.0154578 6.81721 0.0386445 6.79403 0.0386445 6.77084C0.216409 5.09367 1.76219 3.43196 4.0654 3.44742C10.2253 3.49379 16.393 3.46287 22.5529 3.46287C22.6766 3.46287 22.8002 3.46287 22.9394 3.46287C22.9394 2.87548 22.9394 2.32673 22.9394 1.73933C22.2515 1.73933 21.5868 1.73933 20.868 1.73933C20.868 1.1442 20.868 0.572266 20.868 0.00805664C22.8389 0.00805664 24.8098 0.00805664 26.7806 0.00805664C26.7806 0.579995 26.7806 1.15966 26.7806 1.76252C26.0541 1.76252 25.3817 1.76252 24.7093 1.76252C24.7093 2.33445 24.7093 2.88321 24.7093 3.4706C25.1576 3.4706 25.5826 3.45514 26.0155 3.4706C27.654 3.53243 29.0529 4.63767 29.5089 6.20663C29.5785 6.41531 29.6249 6.63172 29.679 6.8404ZM3.26159 22.7078C10.9982 22.7078 18.7039 22.7078 26.4096 22.7078C26.4096 18.5342 26.4096 14.3761 26.4096 10.2257C18.6807 10.2257 10.975 10.2257 3.26159 10.2257C3.26159 14.3838 3.26159 18.5342 3.26159 22.7078ZM27.9245 8.45574C27.9245 7.96109 27.9709 7.49736 27.9168 7.04135C27.7854 5.92066 26.9197 5.19415 25.7604 5.19415C18.4798 5.19415 11.1992 5.19415 3.91082 5.19415C3.84126 5.19415 3.7717 5.19415 3.70987 5.20187C2.92925 5.25598 2.35731 5.63469 1.98633 6.30711C1.61534 6.98725 1.76219 7.72922 1.74673 8.45574C10.4958 8.45574 19.1908 8.45574 27.9245 8.45574ZM20.0488 24.4777C15.2878 24.4777 10.4958 24.4777 5.68074 24.4777C5.68074 25.0342 5.68074 25.5752 5.68074 26.1317C10.349 26.1317 14.9941 26.1317 19.5928 26.1317C19.7473 25.5675 19.8942 25.0342 20.0488 24.4777ZM24.8716 26.209C24.8716 25.2506 24.1064 24.47 23.1558 24.4623C22.1974 24.4546 21.4013 25.2506 21.4013 26.209C21.409 27.1597 22.1897 27.9403 23.1403 27.9403C24.091 27.9403 24.8716 27.1674 24.8716 26.209Z" fill="currentcolor"/>
+                <path d="M21.8574 20.0728C21.2932 19.8873 20.7599 19.7095 20.2111 19.524C20.4507 18.7898 20.6903 18.0787 20.9299 17.3368C20.1416 17.3368 19.3919 17.3368 18.6035 17.3368C19.0982 15.8451 19.5928 14.3689 20.0875 12.8772C20.6362 13.0627 21.1772 13.2405 21.7337 13.4259C21.4941 14.1525 21.2623 14.8635 21.0149 15.5978C21.7878 15.5978 22.5298 15.5978 23.3336 15.5978C22.839 17.1049 22.352 18.5734 21.8574 20.0728Z" fill="currentcolor"/>
+                <path d="M6.2207 13.0549C6.80037 13.0549 7.34912 13.0549 7.92879 13.0549C7.92879 15.3272 7.92879 17.5918 7.92879 19.8718C7.36458 19.8718 6.80037 19.8718 6.2207 19.8718C6.2207 17.6073 6.2207 15.3427 6.2207 13.0549Z" fill="currentcolor"/>
+                <path d="M9.58203 13.0549C10.1617 13.0549 10.7182 13.0549 11.2901 13.0549C11.2901 15.3272 11.2901 17.5918 11.2901 19.8718C10.7182 19.8718 10.1617 19.8718 9.58203 19.8718C9.58203 17.6073 9.58203 15.3427 9.58203 13.0549Z" fill="currentcolor"/>
+                <path d="M12.9453 13.0549C13.525 13.0549 14.0815 13.0549 14.6534 13.0549C14.6534 15.3272 14.6534 17.5918 14.6534 19.8718C14.0892 19.8718 13.525 19.8718 12.9453 19.8718C12.9453 17.6073 12.9453 15.3427 12.9453 13.0549Z" fill="currentcolor"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_856_2521">
+                <rect width="29.679" height="29.679" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <span>Generator</span>
+          </div>
+          <div class="card">
+            <div class="image">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25.4297 29.9995C24.6486 29.9995 23.867 29.9995 23.0859 29.9995C23.0859 29.1845 23.0859 28.3694 23.0859 27.5573C17.7129 27.5573 12.382 27.5573 7.03125 27.5573C7.03125 28.3835 7.03125 29.1915 7.03125 29.9995C6.2502 29.9995 5.46855 29.9995 4.6875 29.9995C4.6875 29.1856 4.6875 28.3718 4.6875 27.538C4.06641 27.538 3.4834 27.5456 2.90098 27.5362C1.50234 27.514 0.343945 26.5483 0.05625 25.1778C0.0451172 25.1233 0.0193359 25.0718 0 25.019C0 20.1558 0 15.2925 0 10.4292C0.0123047 10.4146 0.0310547 10.4017 0.0357422 10.3847C0.455859 8.71358 1.48359 7.90967 3.20273 7.90967C8.55 7.90967 13.8979 7.90967 19.2451 7.90967C21.8408 7.90967 24.4365 7.89971 27.0322 7.91377C28.2932 7.92081 29.202 8.52608 29.7463 9.66045C29.8623 9.90186 29.9174 10.172 30.0006 10.4292C30.0006 15.2925 30.0006 20.1558 30.0006 25.019C29.9801 25.0812 29.9543 25.1427 29.9396 25.2065C29.7328 26.0896 29.24 26.7581 28.4426 27.1935C27.9891 27.4413 27.4986 27.5438 26.9824 27.5397C26.4691 27.5351 25.957 27.5386 25.4297 27.5386C25.4297 28.3853 25.4297 29.1927 25.4297 29.9995ZM14.9707 25.1948C18.9246 25.1948 22.8779 25.1948 26.8318 25.1948C27.4793 25.1948 27.6562 25.0214 27.6562 24.3868C27.6562 19.9448 27.6562 15.5034 27.6562 11.0614C27.6562 10.4356 27.4775 10.254 26.8611 10.254C18.9539 10.254 11.0461 10.254 3.13887 10.254C2.52246 10.2534 2.34375 10.4351 2.34375 11.0608C2.34375 15.5028 2.34375 19.9442 2.34375 24.3862C2.34375 25.0208 2.52129 25.1948 3.16816 25.1948C7.10215 25.1948 11.0361 25.1948 14.9707 25.1948Z" fill="currentcolor"/>
+                <path d="M8.67149 0C8.73653 0.0679687 8.79747 0.140625 8.86719 0.20332C9.67286 0.926953 9.94356 2.1252 9.39747 3.05625C8.72364 4.20527 7.95899 5.30156 7.23536 6.41836C6.50118 6.03926 6.01251 5.00273 6.18067 4.13027C6.24571 3.79336 6.36583 3.44531 6.54688 3.15645C7.21661 2.0918 7.92149 1.05 8.6129 0C8.63223 0 8.65215 0 8.67149 0Z" fill="currentcolor"/>
+                <path d="M15.7027 0C15.7678 0.0679687 15.8287 0.140625 15.8984 0.20332C16.7041 0.926953 16.9748 2.1252 16.4287 3.05625C15.7549 4.20527 14.9902 5.30156 14.2666 6.41836C13.5324 6.03926 13.0438 5.00273 13.2119 4.13027C13.277 3.79336 13.3971 3.44531 13.5781 3.15645C14.2479 2.0918 14.9527 1.05 15.6441 0C15.6635 0 15.6834 0 15.7027 0Z" fill="currentcolor"/>
+                <path d="M22.734 0C22.799 0.0679687 22.86 0.140625 22.9297 0.20332C23.7354 0.926953 24.0061 2.1252 23.46 3.05625C22.7861 4.20527 22.0215 5.30156 21.2979 6.41836C20.5637 6.03926 20.075 5.00273 20.2432 4.13027C20.3082 3.79336 20.4283 3.44531 20.6094 3.15645C21.2791 2.0918 21.984 1.05 22.6754 0C22.6947 0 22.7147 0 22.734 0Z" fill="currentcolor"/>
+                <path d="M4.70898 12.6104C5.48418 12.6104 6.23418 12.6104 7.00762 12.6104C7.00762 16.0187 7.00762 19.4189 7.00762 22.8355C6.24707 22.8355 5.48945 22.8355 4.70898 22.8355C4.70898 19.4383 4.70898 16.0381 4.70898 12.6104Z" fill="currentcolor"/>
+                <path d="M9.27148 22.8371C9.27148 19.4205 9.27148 16.0268 9.27148 12.6172C10.0438 12.6172 10.8008 12.6172 11.5795 12.6172C11.5795 16.0215 11.5795 19.4223 11.5795 22.8371C10.8137 22.8371 10.0555 22.8371 9.27148 22.8371Z" fill="currentcolor"/>
+                <path d="M16.1498 22.8389C15.3758 22.8389 14.6182 22.8389 13.8447 22.8389C13.8447 19.4287 13.8447 16.0309 13.8447 12.6172C14.6141 12.6172 15.3705 12.6172 16.1498 12.6172C16.1498 16.0162 16.1498 19.4146 16.1498 22.8389Z" fill="currentcolor"/>
+                <path d="M18.4775 12.6111C19.2557 12.6111 20.0057 12.6111 20.7779 12.6111C20.7779 16.0207 20.7779 19.4208 20.7779 22.8369C20.0145 22.8369 19.2568 22.8369 18.4775 22.8369C18.4775 19.4361 18.4775 16.0353 18.4775 12.6111Z" fill="currentcolor"/>
+                <path d="M23.1064 12.6111C23.8846 12.6111 24.6346 12.6111 25.4068 12.6111C25.4068 16.0207 25.4068 19.4208 25.4068 22.8369C24.6434 22.8369 23.8857 22.8369 23.1064 22.8369C23.1064 19.4361 23.1064 16.0353 23.1064 12.6111Z" fill="currentcolor"/>
+                </svg>
+            </div>
+            <span>Space Heater</span>
+          </div>
+        </div>
+        <div class="description">
+          <div class="content">
+            <div class="btn-wrapper">
+              <button class="btn-primary">What IS IT?</button>
+              <button class="btn-primary">Reasons to buy</button>
+              <button class="btn-primary">Key things to know</button>
+            </div>
+            <h3>What IS IT?</h3>
+            <p>
+              A generator is an appliance that provides an alternative source of electricity to the grid. It generally has two use cases, to provide back-up electricity if you lose power, for example due to a hurricane, and to provide a portable source of power, for example while camping or operating a food truck.
+            </p>
+          </div>
+          <div class="display">
+            <div class="image">
+              <img src="/assets/generator1.png" alt="generator" />
+            </div>
+            <h5>NATURE'S GENERATOR || Solar || 7200W</h5>
+            <span>$6,897</span>
+          </div>
+        </div>
+        <div class="quiz">
+          <h3>Lets start your quiz!</h3>
+          <p>First, let’s find out if you need a generator at all.</p>
+          <p><span>ANSWER our quiz </span>to see your personalized results in real time!</p>
+          <div class="progress">
+            <div class="progress-bar">
+            </div>
+            <span>0%</span>
+          </div>
+        </div>
+        <div class="fact">
+          <div class="data">
+            <h4>It is a long established fact that a reader will be distracted by the readable content?</h4>
+            <div class="form-group">
+              <input type="search" name="search" placeholder="Enter Your Answer Here..."/>
+              <p>Press <span>Enter</span> to submit</p>
+            </div>
+            <span>Don’t know how many watts you need?</span>
+            <button class="btn-primary">Try our calculator</button>
+            <div class="question">
+              <h6>Why do we ask you this question?</h6>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur..... <span>see more</span>
+              </p>
+            </div>
+            <ul>
+              <li>Back</li>
+              <li>Skip</li>
+              <li>Submit</li>
+            </ul>
+          </div>
+          <div id="quiz-radar">
+            <div id="container"></div>
+            <script>
+              anychart.onDocumentReady(function () {});
+            </script>
+          </div>
+        </div>
+        <h3>Your Ranked Product Listings</h3>
+        <p>You can save this list to your profile</p>
+        <div class="ranked-products">
+          <div class="chart">
+              <div id="ranked-radar">
+                <div id="ranked-container">
+                  <script>
+                    anychart.onDocumentReady(function () {});
+                  </script>
+                </div>
+              </div>
+              <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut pariatur ipsam voluptates exercitationem temporibus cumque repellat laboriosam molestiae omnis,
+              </p>
+          </div>
+          <span>32 Products</span>
+          <div class="card-listing-wrapper">
+            <div class="ranked-card-listing">
+              <div class="card">
+                <div class="rank"># 58</div>
+                <div class="image">
+                  <img src="/assets/generator2.png" alt="generator" />
+                </div>
+                <p>Lorem Ipsum orde la Masuta Lorem</p>
+                <div class="feature">
+                  <div class="petroleum">
+                    <p>Portable - Gasoline, Propane,</p>
+                    <p>Methane - 4000w</p>
+                  </div>
+                  <div class="score">
+                    <div class="image">
+                      <img src="/assets/score-icon.svg" alt="score" />
+                    </div>
+                    <span>98</span>
+                  </div>
+                </div>
+                <div class="price">
+                  <span>$115.15</span>
+                  <button class="btn-primary">Best price</button>
+                </div>
+                <div class="services">
+                  <ul class="home-delivery">
+                    <li class="image">
+                      <img src="/assets/trolly.svg" alt="trolly" />
+                    </li>
+                    <li class="image">
+                      <img src="/assets/homedepot.svg" alt="h0medepot" />
+                    </li>
+                    <li>Homedepot</li>
+                  </ul>
+                  <a href="#" class="retailer">see all retailer</a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="rank"># 58</div>
+                <div class="image">
+                  <img src="/assets/generator2.png" alt="generator" />
+                </div>
+                <p>Lorem Ipsum orde la Masuta Lorem</p>
+                <div class="feature">
+                  <div class="petroleum">
+                  <p>Portable - Gasoline, Propane,</p>
+                  <p>Methane - 4000w</p>
+                  </div>
+                  <div class="score">
+                    <div class="image">
+                      <img src="/assets/score-icon.svg" alt="score" />
+                    </div>
+                    <span>98</span>
+                  </div>
+                </div>
+                <div class="price">
+                  <span>$115.15</span>
+                  <button class="btn-primary">Best price</button>
+                </div>
+                <div class="services">
+                  <ul class="home-delivery">
+                    <li class="image">
+                      <img src="/assets/trolly.svg" alt="trolly" />
+                    </li>
+                    <li class="image">
+                      <img src="/assets/homedepot.svg" alt="homedepot" />
+                    </li>
+                    <li>Homedepot</li>
+                  </ul>
+                  <a href="#" class="retailer">see all retailer</a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="rank"># 58</div>
+                <div class="image">
+                  <img src="/assets/generator2.png" alt="generator" />
+                </div>
+                <p>Lorem Ipsum orde la Masuta Lorem</p>
+                <div class="feature">
+                  <div class="petroleum">
+                    <p>Portable - Gasoline, Propane,</p>
+                    <p>Methane - 4000w</p>
+                  </div>
+                  <div class="score">
+                    <div class="image">
+                      <img src="/assets/score-icon.svg" alt="score" />
+                    </div>
+                    <span>98</span>
+                  </div>
+                </div>
+                <div class="price">
+                  <span>$115.15</span>
+                  <button class="btn-primary">Best price</button>
+                </div>
+                <div class="services">
+                  <ul class="home-delivery">
+                    <li class="image">
+                      <img src="/assets/trolly.svg" alt="trolly" />
+                    </li>
+                    <li class="image">
+                      <img src="/assets/homedepot.svg" alt="homedepot" />
+                    </li>
+                    <li>Homedepot</li>
+                  </ul>
+                  <a href="#" class="retailer">see all retailer</a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="rank"># 58</div>
+                <div class="image">
+                  <img src="/assets/generator2.png" alt="generator" />
+                </div>
+                <p>Lorem Ipsum orde la Masuta Lorem</p>
+                <div class="feature">
+                  <div class="petroleum">
+                    <p>Portable - Gasoline, Propane,</p>
+                    <p>Methane - 4000w</p>
+                  </div>
+                  <div class="score">
+                    <div class="image">
+                      <img src="/assets/score-icon.svg" alt="score" />
+                    </div>
+                    <span>98</span>
+                  </div>
+                </div>
+                <div class="price">
+                  <span>$115.15</span>
+                  <button class="btn-primary">Best price</button>
+                </div>
+                <div class="services">
+                  <ul class="home-delivery">
+                    <li class="image">
+                      <img src="/assets/trolly.svg" alt="trolly" />
+                    </li>
+                    <li class="image">
+                      <img src="/assets/homedepot.svg" alt="homedepot" />
+                    </li>
+                    <li>Homedepot</li>
+                  </ul>
+                  <a href="#" class="retailer">see all retailer</a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="rank"># 58</div>
+                <div class="image">
+                  <img src="/assets/generator2.png" alt="generator" />
+                </div>
+                <p>Lorem Ipsum orde la Masuta Lorem</p>
+                <div class="feature">
+                  <div class="petroleum">
+                    <p>Portable - Gasoline, Propane,</p>
+                    <p>Methane - 4000w</p>
+                  </div>
+                  <div class="score">
+                    <div class="image">
+                      <img src="/assets/score-icon.svg" alt="score" />
+                    </div>
+                    <span>98</span>
+                  </div>
+                </div>
+                <div class="price">
+                  <span>$115.15</span>
+                  <button class="btn-primary">Best price</button>
+                </div>
+                <div class="services">
+                  <ul class="home-delivery">
+                    <li class="image">
+                      <img src="/assets/trolly.svg" alt="trolly" />
+                    </li>
+                    <li class="image">
+                      <img src="/assets/homedepot.svg" alt="homedepot" ?>
+                    </li>
+                    <li>Homedepot</li>
+                  </ul>
+                  <a href="#" class="retailer">see all retailer</a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="rank"># 58</div>
+                <div class="image">
+                  <img src="/assets/generator2.png" alt="generator" />
+                </div>
+                <p>Lorem Ipsum orde la Masuta Lorem</p>
+                <div class="feature">
+                  <div class="petroleum">
+                    <p>Portable - Gasoline, Propane,</p>
+                    <p>Methane - 4000w</p>
+                  </div>
+                  <div class="score">
+                    <div class="image">
+                      <img src="/assets/score-icon.svg" alt="score" />
+                    </div>
+                    <span>98</span>
+                  </div>
+                </div>
+                <div class="price">
+                  <span>$115.15</span>
+                  <button class="btn-primary">Best price</button>
+                </div>
+                <div class="services">
+                  <ul class="home-delivery">
+                    <li class="image">
+                      <img src="/assets/trolly.svg" alt="trolly" />
+                    </li>
+                    <li class="image">
+                      <img src="/assets/homedepot.svg" alt="homedepot" />
+                    </li>
+                    <li>Homedepot</li>
+                  </ul>
+                  <a href="#" class="retailer">see all retailer</a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="rank"># 58</div>
+                <div class="image">
+                  <img src="/assets/generator2.png" alt="generator" />
+                </div>
+                <p>Lorem Ipsum orde la Masuta Lorem</p>
+                <div class="feature">
+                  <div class="petroleum">
+                    <p>Portable - Gasoline, Propane,</p>
+                    <p>Methane - 4000w</p>
+                  </div>
+                  <div class="score">
+                    <div class="image">
+                      <img src="/assets/score-icon.svg" alt="score" />
+                    </div>
+                    <span>98</span>
+                  </div>
+                </div>
+                <div class="price">
+                  <span>$115.15</span>
+                  <button class="btn-primary">Best price</button>
+                </div>
+                <div class="services">
+                  <ul class="home-delivery">
+                    <li class="image">
+                      <img src="/assets/trolly.svg" alt="trolly" />
+                    </li>
+                    <li class="image">
+                      <img src="/assets/homedepot.svg" alt="homedepot" />
+                    </li>
+                    <li>Homedepot</li>
+                  </ul>
+                  <a href="#" class="retailer">see all retailer</a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="rank"># 58</div>
+                <div class="image">
+                  <img src="/assets/generator2.png" alt="generator" />
+                </div>
+                <p>Lorem Ipsum orde la Masuta Lorem</p>
+                <div class="feature">
+                  <div class="petroleum">
+                    <p>Portable - Gasoline, Propane,</p>
+                    <p>Methane - 4000w</p>
+                  </div>
+                  <div class="score">
+                    <div class="image">
+                      <img src="/assets/score-icon.svg" alt="score" />
+                    </div>
+                    <span>98</span>
+                  </div>
+                </div>
+                <div class="price">
+                  <span>$115.15</span>
+                  <button class="btn-primary">Best price</button>
+                </div>
+                <div class="services">
+                  <ul class="home-delivery">
+                    <li class="image">
+                      <img src="/assets/trolly.svg" alt="trolly" />
+                    </li>
+                    <li class="image">
+                      <img src="/assets/homedepot.svg" alt="homedepot" />
+                    </li>
+                    <li>Homedepot</li>
+                  </ul>
+                  <a href="#" class="retailer">see all retailer</a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="rank"># 58</div>
+                <div class="image">
+                  <img src="/assets/generator2.png" alt="generator" />
+                </div>
+                <p>Lorem Ipsum orde la Masuta Lorem</p>
+                <div class="feature">
+                  <div class="petroleum">
+                    <p>Portable - Gasoline, Propane,</p>
+                    <p>Methane - 4000w</p>
+                  </div>
+                  <div class="score">
+                    <div class="image">
+                      <img src="/assets/score-icon.svg" alt="score" />
+                    </div>
+                    <span>98</span>
+                  </div>
+                </div>
+                <div class="price">
+                  <span>$115.15</span>
+                  <button class="btn-primary">Best price</button>
+                </div>
+                <div class="services">
+                  <ul class="home-delivery">
+                    <li class="image">
+                      <img src="/assets/trolly.svg" alt="trolly" />
+                    </li>
+                    <li class="image">
+                      <img src="/assets/homedepot.svg" alt="homedepot" />
+                    </li>
+                    <li>Homedepot</li>
+                  </ul>
+                  <a href="#" class="retailer">see all retailer</a>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+        <div class="filtered-products">
+          <h3>Filtered Products</h3>
+          <p>These products have been filtered because they do not match one or more of your requirements</p>
+          <span>32 Products</span>
+          <div class="filtered-card-listing">
+            <div class="card">
+              <div class="rank"># 58</div>
+              <div class="image">
+                <img src="/assets/generator2.png" alt="generator" />
+              </div>
+              <p>Lorem Ipsum orde la Masuta Lorem</p>
+              <div class="feature">
+                <div class="petroleum">
+                  <p>Portable - Gasoline, Propane,</p>
+                  <p>Methane - 4000w</p>
+                </div>
+                <div class="score">
+                  <div class="image">
+                    <img src="/assets/score-icon.svg" alt="score" />
+                  </div>
+                  <span>98</span>
+                </div>
+              </div>
+              <div class="price">
+                <span>$115.15</span>
+                <button class="btn-primary">Best price</button>
+              </div>
+              <div class="services">
+                <ul class="home-delivery">
+                  <li class="image">
+                    <img src="/assets/trolly.svg" alt="trolly" />
+                  </li>
+                  <li class="image">
+                    <img src="/assets/homedepot.svg" alt="homedepot" />
+                  </li>
+                  <li>Homedepot</li>
+                </ul>
+                <a href="#" class="retailer">see all retailer</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="rank"># 58</div>
+              <div class="image">
+                <img src="/assets/generator2.png" alt="generator" />
+              </div>
+              <p>Lorem Ipsum orde la Masuta Lorem</p>
+              <div class="feature">
+                <div class="petroleum">
+                <p>Portable - Gasoline, Propane,</p>
+                <p>Methane - 4000w</p>
+                </div>
+                <div class="score">
+                  <div class="image">
+                    <img src="/assets/score-icon.svg" alt="score" />
+                  </div>
+                  <span>98</span>
+                </div>
+              </div>
+              <div class="price">
+                <span>$115.15</span>
+                <button class="btn-primary">Best price</button>
+              </div>
+              <div class="services">
+                <ul class="home-delivery">
+                  <li class="image">
+                    <img src="/assets/trolly.svg" alt="trolly" />
+                  </li>
+                  <li class="image">
+                    <img src="/assets/homedepot.svg" alt="homedepot" />
+                  </li>
+                  <li>Homedepot</li>
+                </ul>
+                <a href="#" class="retailer">see all retailer</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="rank"># 58</div>
+              <div class="image">
+                <img src="/assets/generator2.png" alt="generator" />
+              </div>
+              <p>Lorem Ipsum orde la Masuta Lorem</p>
+              <div class="feature">
+                <div class="petroleum">
+                  <p>Portable - Gasoline, Propane,</p>
+                  <p>Methane - 4000w</p>
+                </div>
+                <div class="score">
+                  <div class="image">
+                    <img src="/assets/score-icon.svg" alt="score" />
+                  </div>
+                  <span>98</span>
+                </div>
+              </div>
+              <div class="price">
+                <span>$115.15</span>
+                <button class="btn-primary">Best price</button>
+              </div>
+              <div class="services">
+                <ul class="home-delivery">
+                  <li class="image">
+                    <img src="/assets/trolly.svg" alt="trolly" />
+                  </li>
+                  <li class="image">
+                    <img src="/assets/homedepot.svg" alt="homedepot" />
+                  </li>
+                  <li>Homedepot</li>
+                </ul>
+                <a href="#" class="retailer">see all retailer</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="rank"># 58</div>
+              <div class="image">
+                <img src="/assets/generator2.png" alt="generator" />
+              </div>
+              <p>Lorem Ipsum orde la Masuta Lorem</p>
+              <div class="feature">
+                <div class="petroleum">
+                  <p>Portable - Gasoline, Propane,</p>
+                  <p>Methane - 4000w</p>
+                </div>
+                <div class="score">
+                  <div class="image">
+                    <img src="/assets/score-icon.svg" alt="score" />
+                  </div>
+                  <span>98</span>
+                </div>
+              </div>
+              <div class="price">
+                <span>$115.15</span>
+                <button class="btn-primary">Best price</button>
+              </div>
+              <div class="services">
+                <ul class="home-delivery">
+                  <li class="image">
+                    <img src="/assets/trolly.svg" alt="trolly" />
+                  </li>
+                  <li class="image">
+                    <img src="/assets/homedepot.svg" alt="homedepot" />
+                  </li>
+                  <li>Homedepot</li>
+                </ul>
+                <a href="#" class="retailer">see all retailer</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="rank"># 58</div>
+              <div class="image">
+                <img src="/assets/generator2.png" alt="generator" />
+              </div>
+              <p>Lorem Ipsum orde la Masuta Lorem</p>
+              <div class="feature">
+                <div class="petroleum">
+                  <p>Portable - Gasoline, Propane,</p>
+                  <p>Methane - 4000w</p>
+                </div>
+                <div class="score">
+                  <div class="image">
+                    <img src="/assets/score-icon.svg" alt="score" />
+                  </div>
+                  <span>98</span>
+                </div>
+              </div>
+              <div class="price">
+                <span>$115.15</span>
+                <button class="btn-primary">Best price</button>
+              </div>
+              <div class="services">
+                <ul class="home-delivery">
+                  <li class="image">
+                    <img src="/assets/trolly.svg" alt="trolly" />
+                  </li>
+                  <li class="image">
+                    <img src="/assets/homedepot.svg" alt="homedepot" />
+                  </li>
+                  <li>Homedepot</li>
+                </ul>
+                <a href="#" class="retailer">see all retailer</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="rank"># 58</div>
+              <div class="image">
+                <img src="/assets/generator2.png" alt="generator" />
+              </div>
+              <p>Lorem Ipsum orde la Masuta Lorem</p>
+              <div class="feature">
+                <div class="petroleum">
+                  <p>Portable - Gasoline, Propane,</p>
+                  <p>Methane - 4000w</p>
+                </div>
+                <div class="score">
+                  <div class="image">
+                    <img src="/assets/score-icon.svg" alt="score" />
+                  </div>
+                  <span>98</span>
+                </div>
+              </div>
+              <div class="price">
+                <span>$115.15</span>
+                <button class="btn-primary">Best price</button>
+              </div>
+              <div class="services">
+                <ul class="home-delivery">
+                  <li class="image">
+                    <img src="/assets/trolly.svg" alt="trolly" />
+                  </li>
+                  <li class="image">
+                    <img src="/assets/homedepot.svg" alt="homedepot" />
+                  </li>
+                  <li>Homedepot</li>
+                </ul>
+                <a href="#" class="retailer">see all retailer</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="recommendation">
+        <div class="image">
+          <img src="/assets/banner.svg" alt="banner" />   
+        </div>
+        <div class="content-wrapper">
+          <div class="image">
+            <img src="/assets/generator3.png" alt="generator" />
+          </div>
+          <div class="content">
+            <p>Lorem Ipsum orde la Masuta || MM-3200 E</p>
+            <p>Champion Power Equipment</p>
+            <span>$115.15</span>
+          </div>
+        </div>
+      </div>
+      <div class="services">
+        <ul class="home-delivery">
+          <li class="image">
+            <img src="/assets/trolly.svg" alt="trolly" />  
+          </li>
+          <li class="image">
+            <img src="/assets/homedepot.svg" alt="homedepot" />    
+          </li>
+          <li>Homedepot</li>
+        </ul>
+        <a href="#">See all retailers</a>
+      </div>
+    </footer>
+  </body>
+  <script>
+    var toggle=document.getElementById("toggle");
+    var target=document.getElementById("target");
+    toggle.onclick = function() {
+      if (target.style.display === "none") {
+        target.style.display = "flex";
+      } 
+      else {
+        target.style.display = "none";
+      }
+    }
+    var data1 = [
+     {x: "Price", value: 60},
+     {x: "Portablity", value: 20},
+     {x: "Ease of use", value: 80},
+     {x: "Wattage", value: 80},
+     {x: "price", value: 60},
+     {x: "Ease-of-use", value: 80},
+    ];
+    var chart = anychart.radar();
+    chart.yScale()
+    .minimum(0)
+    .maximum(80)
+    .ticks({"interval":20});
+    var g = chart.area(data1)
+    g.fill("#fdc53940");
+    g.stroke({color: "none"});
+    chart.container("container");
+    chart.draw();
+    var data3 = [
+     {x: "price", value: 80},
+     {x: "portablity", value: 60},
+     {x: "ease of use", value: 25},
+     {x: "wattage", value: 80},
+     {x: "Price", value: 79},
+     {x: "ease-of-use", value: 59},
+    ];
+    var data4 = [
+     {x: "price", value: 60},
+     {x: "portablity", value: 20},
+     {x: "ease of use", value: 80},
+     {x: "wattage", value: 80},
+     {x: "Price", value: 60},
+     {x: "ease-of-use", value: 80},
+    ];
+    var data5 = [
+     {x: "price", value: 60},
+     {x: "portablity", value: 80},
+     {x: "ease of use", value: 60},
+     {x: "wattage", value: 20},
+     {x: "Price", value: 80},
+     {x: "ease-of-use", value: 80},
+    ];
+    var data6 = [
+     {x: "price", value: 80},
+     {x: "portablity", value: 60},
+     {x: "ease of use", value: 80},
+     {x: "wattage", value: 60},
+     {x: "Price", value: 20},
+     {x: "ease-of-use", value: 80},
+    ];
+    var chart = anychart.radar();
+    chart.yScale()
+    .minimum(0)
+    .maximum(80)
+    .ticks({"interval":20});
+    var g = chart.area(data3);
+    g.fill("#b338ff33");
+    g.stroke({color: "#b338ff" , radius: "6.25px" });
+    var k = chart.area(data4);
+    k.fill("#fdc53940");
+    k.stroke({color: "#fdc539" , radius: "6.25px" });
+    var l = chart.area(data5);
+    l.fill("#13AC3E33");
+    l.stroke({color: "#13AC3E" , radius: "6.25px" });
+    var m = chart.area(data6);
+    m.fill("#17eaaa33");
+    m.stroke({color: "#17EAAA" , radius: "7.5px" });
+    chart.container("ranked-container");
+    chart.draw();
+    const body= document.body;
+    const navBar= document.querySelector(".nav-bar");
+    const menuButton=document.querySelector(".responsive-menu-button");
+    const respnsiveBar=document.querySelector(".drawer");
+    const contentWrapper =document.querySelector(".content-wrapper")
+    if (menuButton) {
+      menuButton.addEventListener("click", () => {
+        respnsiveBar.classList.add("active");
+        navBar.classList.add("blur");
+        contentWrapper.classList.add("blur");
+        body.style.overflow = "hidden";
+      }
+    )
+  }
+    if (contentWrapper) {
+    contentWrapper.addEventListener("click", () => {
+        respnsiveBar.classList.remove("active");
+        navBar.classList.remove("blur")
+        contentWrapper.classList.remove("blur")
+      }
+    )
+  }
+    if (navBar) {
+    navBar.addEventListener("click", () => {
+      respnsiveBar.classList.remove("active");
+      navBar.classList.remove("blur")
+      contentWrapper.classList.remove("blur")
+    },true
+    )
+  }
+  </script>
 </html>
